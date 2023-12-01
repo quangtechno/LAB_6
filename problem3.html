@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="problem3.css">
+    <script>
+        array=[
+           {
+                name: "The Alchemist",
+                image: "D:\\web\\lab_5\\img_Practice3\\book.jpg",
+                price:182700
+            },
+           {
+                name:"learning how to learn",
+                image:"D:\\web\\lab_5\\img_Practice3\\book.jpg",
+                price: 251100
+
+            },
+            {
+                name:"Thinking,Fast and Slow",
+                image:"D:\\web\\lab_5\\img_Practice3\\harrypotter.png",
+                price: 299700
+            }
+          
+        ]
+    
+     Array.sort((s1,s2)=>{
+      s1.price-s2.price
+     })
+     function println(){
+
+    for(var i=0;i<array.length;i++){
+     HTML=`
+        <div class="subDIV">
+        <h4> ${array[i].name}</h4>
+      <img src="${array[i].image}" style="width: 60px; height: 60px">
+      <br>
+      <p>${array[i].price}VND</p>
+      </div>
+        `
+ document.getElementById("addDiv").innerHTML+=HTML;
+    }
+       
+}
+
+    </script>
+    </head>
+    <body>
+<div class="mainDIV">
+    <div class="addDiv"id="addDiv" ></div>
+<!--     <img src="D:\web\lab_5\img_Practice3\book.jpg" style="width: 30px; height: 30;">
+ -->   <button type="button" onclick="println()">sort</button>
+</div>
+    </body>
+</html>

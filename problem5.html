@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <script>
+        function printNumber(){
+          let line="";
+            let number=document.getElementById("numbertext").value;
+          for(var i=1;i<=number;i++){
+            line+=i+" ";
+          }
+         document.getElementById("printText").innerText=line;
+        }
+        
+    </script>
+    </head>
+    <body>
+        <h3>Numbers from 1 to N</h3>
+        <label for="enterTheNumber">ENter a positive integer N:
+        <input type="number" id="numbertext"style="width: 50%;">
+        <input type="button" onclick="printNumber()"value="Print Numbers"></label>
+    <p id="printText">Please enter a valid positive integer</p>
+    </body>
+</html>

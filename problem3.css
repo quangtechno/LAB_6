@@ -1,0 +1,16 @@
+.mainDIV{
+    display: table;
+}
+.addDiv{
+    display: flex;
+    flex-direction: row;
+    border: 1px;
+    text-align: center;
+}
+.subDIV{
+    width: 100px;
+    height: inherit;
+    margin: 10px;
+    border: 2px;
+    background-color: wheat;
+}

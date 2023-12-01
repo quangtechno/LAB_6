@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <script>
+        function primeCheck(){
+            let number=document.getElementById("numbertext").value;
+           let i=2;
+           let check=true;
+           if(number<=1){
+            check=false;
+            document.getElementById("printCheck").innerText=check;
+            return ;
+           }
+           while(i<=number/2){
+            if(number%i==0){
+              check=false;
+              break;
+            }
+            i++;
+           }
+           document.getElementById("printCheck").innerText=check;
+        }
+    </script>
+    </head>
+    <body>
+        <h2>Prime Check</h2>
+        <label>Enter a positive integer N:<input type="number" style="width: 15%; "id ="numbertext"><input type="button" onclick="primeCheck()" value="Check Prime"></label>
+    <p id="printCheck">Please enter a valid positive integer</p>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+
+        function cal() {
+            let HTML;
+            array = ["1234",
+                "1234abc", 0, 15, "3.14ivan", "infinity", "999999999999999"];
+           HTML +=
+                `<table border="1px">  
+        <th>str</th>
+       <th>parseInt(str)</th>
+       <th>parseFloat</th>
+       <th>Number(str)</th>
+       <th>+str</th>
+       <th>str|0</th>
+`
+            /* for(var i=0;i<array.length;i++){
+              document.write(array[i]);
+            } */
+            for (var i = 0; i < array.length; i++) {
+                HTML +=
+                    `<tr>
+                        <td>${array[i]}</td>
+                        <td>${parseInt(array[i])}</td>
+                        <td>${parseFloat(array[i])}</td>
+                        <td>${Number(array[i])}</td>
+                        <td>${+array[i]}</td>
+                        <td>${array[i]^0}</td>
+                  </tr> `
+               
+            }
+            document.getElementById("tableID").innerHTML +=HTML;
+
+        }
+    </script>
+
+</head>
+
+<body>
+    <div id="tableID">
+
+
+        <button type="button" onclick="cal()"> calculate</button>
+</body>
+
+</html>

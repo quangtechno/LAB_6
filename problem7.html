@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function calMMSA(){
+        let line =document.getElementById("textcal").value;
+        let arr = line.split(",");
+        let min=arr[0];
+        let max=0;
+        let sum=0;
+        let avg=0;
+        for(var i=0;i<arr.length;i++){
+            min=Math.min(min,arr[i]);
+            max=Math.max(max,arr[i]);
+            sum+=parseInt(arr[i]);
+        }
+        avg=sum/arr.length;
+        avg=avg.toFixed(2);
+        console.log();
+        document.getElementById("pMin").innerText=`Min = ${min}`;
+        document.getElementById("pMax").innerText=`Max = ${max}`;
+        document.getElementById("pSum").innerText=`Sum = ${sum}`;
+        document.getElementById("pAvg").innerText=`Avg = ${avg}`;
+    }
+    </script>
+</head>
+
+<body>
+    <h1>MMSA of N Numbers</h1>
+    <label> Enter the numbers separated by commas:<input type="text" id="textcal" style="width: 20%;">
+    <input type="button" id="MMSA" onclick="calMMSA()" value="Calculate MMSA">
+    <p id="pMin">Min</p>
+    <p id="pMax">Max</p>
+    <p id="pSum">Sum</p>
+    <p id="pAvg">Avg</p>
+</body>
+
+</html>
